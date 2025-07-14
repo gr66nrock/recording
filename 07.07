@@ -3,48 +3,51 @@
 int Answer;
 int bin;
 
-int test(int num){
-    
-    if (num==0) {
-	    return;
-    }
-    else {
-	    int put = num % 2;
-    	num /= 2;
+void test(int num) {
 
-	    test(num);
+	if (num == 0) {
+		return;
+	}
+	else {
+		int put = num % 2;
+		num /= 2;
 
-    	bin*=10;
-    	bin+=put;
+		test(num);
 
-    	return;
-    }
+		bin *= 10;
+		bin += put;
+
+		return;
+	}
 }
 
 int main(void)
 {
-	int T, test_case;
+	int T, test_case, num;
 
 	setbuf(stdout, NULL);
 
 	scanf("%d", &T);
-	for(test_case = 0; test_case < T; test_case++)
+
+	for (test_case = 0; test_case < T; test_case++)
 	{
-		test(T);
-		
-		Answer=0;
-		
-		for(bin==0){
-		    if(bin%10==1){
-		        Answer++;
-		    }
-		    
-		    bin/=10;
+		scanf("%d", &num);
+
+		test(num);
+
+		Answer = 0;
+
+		while(bin != 0){
+			if (bin % 10 == 1) {
+				Answer++;
+			}
+
+			bin /= 10;
 		}
-	
-		printf("Case #%d\n", test_case+1);
-	        	printf("%d\n", Answer);
-        
+
+		printf("Case #%d\n", test_case + 1);
+		printf("%d\n", Answer);
+
 	}
 
 	return 0;
