@@ -1,0 +1,109 @@
+# print "100" 더하기 빼기
+print(170 - 71 + 1)
+
+
+# Print "50" 곱셈
+print(25 * 2)
+
+
+# Print "2.0" 나눗셈
+# 슬래쉬 하나로 나누면 float(실수)를 반환한다
+# 슬래쉬 두개로 나누면 int(정수)를 반환한다.
+print(10 / 5)
+print(10 // 5)
+
+# Print "18.0" 나눗셈
+num = 3*2/2*6
+print(num)
+
+
+# Print "2의 3승" 제곱
+print(2 ** 3)
+
+
+
+
+#사각형 넓이
+width = 400
+height = 200
+
+print(400*200) #여기서 넓이를 출력해보세요!
+
+# print(400*200)말고 다른 방법으로도 풀어보세요!
+print(width * height)
+
+
+
+# 소주 2병을 10명이서 한 잔씩 마셨을 때, 남는 소주의 양은? 
+# 힌트 소주 한 병은 7잔입니다 ^0^  
+
+num_soju = 2
+num_people = 10
+
+leftover_soju = num_soju * 7 %10
+
+print("소주 2병을 10명이서 한 잔씩 마셨을 때, 남는 소주의 양은?")
+print(leftover_soju, "잔")
+
+
+
+#문자열 더하기
+
+string_1 = "비가 내리고, "
+string_2 = "음악이 흐르면, "
+string_3 = "난 당신을 생각해요, "
+string_4 = "당신이 떠나시던 그 밤에 이렇게 비가 왔어요 " 
+
+lyrics = string_1 + string_2 + string_3 + string_4 # lyrics concatenate 하세요!
+print(lyrics) # lyrics를 출력해보세요!
+
+
+
+
+# +=, -=
+
+
+lunch += lemon_juice
+print("오늘 먹은 칼로리는 ? ")
+print(lunch)
+
+patients = 1000   # 확진자 수
+print("어제 확진자 수")
+print(patients)
+
+# 오늘 확진자 수로 변수 patients를 업데이트하세요.
+patients -= 100
+print("오늘 확진자 수")
+print(patients)
+
+
+
+
+
+
+##정리
+
+
+#문자열(String)
+first_name = "Kanghee"
+last_name = "Lee"
+
+#문자열 더하기(String Connection)
+print("이름:")
+full_name = first_name + last_name
+print(full_name)
+
+#숫자(Numeric Data Types)
+print("나이:")
+my_age= 60
+print(my_age)
+
+
+#숫자 사칙연산 (+ - x %)
+half_my_age = my_age // 2
+print(half_my_age)
+
+
+
+
+
