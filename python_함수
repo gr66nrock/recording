@@ -1,0 +1,118 @@
+def add(number): #number라는 함수를 정의(add라는 함수는 number라는 변수가 들어가면)
+  number+=2     #함수의 내용 정의 (number라는 변수에 2를 더하고)
+  print(number) #함수 내용 정의2 (업데이트된 number라는 값을 프린트 해라)
+
+add(number=3)    #number라는 값에 3을 넣어서 add함수의 내용을 실행해라!
+
+
+# sing() 함수 만들기
+def sing():
+  print(string_1)
+  print(string_2)
+  print(string_3)
+  print(string_4)
+
+print('\n 함수로 출력해보기 \n')
+sing()
+
+#노래를 한 번 더 불러보세요
+sing()
+
+
+
+def function():
+  code      <-- 잘 보면 tab 으로 들여쓰기가 되어있는 것을 알 수 있습니다. 파이썬 에서는 tab 으로 함수 안의 내용과 밖의 내용을 구분합니다
+  code
+<-- shift+tab 으로 탈출할 수 있습니다 
+function()
+
+def ordering():
+    print("주문중입니다!")
+
+# 여기에 만들어보세요
+ordering()
+
+
+
+# 전체고객은 100명으로 고정되어 있고, 이번 프로젝트의 매출은 500, 비용은 200 입니다.
+# 이 마케팅 회사의 CAC를 구하여 아래 결과셀과 같이 나오려면 어떻게 해야할까요?
+def cal_CAC(rev, cost, users = 100):
+    print((rev - cost) / users)
+
+# 여기에 답을 적어볼까요?
+cal_CAC(500, 200, 50)
+
+
+#문자열을 표현하는 구문 앞에 f를 붙이면, f-string이 됩니다.
+#문자열 내부에서 치환하려고 하는 내용은 {XX}--> 중괄호 안에 넣으면 됩니다.
+def love (my_name,your_name="주단태"):
+  print(f"{my_name}loves{your_name}")
+love("천서진")
+# f-string을 사용하지 않으면,다음과 같이 나옵니다. 
+
+
+# parameters
+
+def sing(thing):
+  # 파이썬에서는 마치 thing 이라는 변수에 내가 입력한 값이 선언된 것처럼 처리를 합니다.
+  # thing = "눈이"
+  print(thing + " 내리고, ")
+  print("음악이 흐르면, ")
+  print("난 당신을 생각해요, ")
+  print("당신이 떠나시던 그 밤에 이렇게 비가 왔어요 \n") 
+
+sing("눈이") # 이떄 괄호 안에 들어가는 변수를 parameter 또는 함수 인자라고 부릅니다.
+sing("눈물이...")
+sing("아무거나")
+
+
+def sing(thing1, thing2): # 협업을 할때는 만든함수에 어떤 인자가 몇개 들어가들어가는지 꼭 표시를 해주어합니다.
+  print(thing1 + " 내리고, ")
+  print(thing2 + " 흐르면, ")
+  print("난 당신을 생각해요, ")
+  print("당신이 떠나시던 그 밤에 이렇게 비가 왔어요 \n") 
+
+sing("비가","음악이") # 파이썬에서는 함수인자가 들어가는 순서대로 배정됩니다. thing1 -> thing2 순서 
+
+
+def sing(thing1, thing2 = "음악이"): # 기본값은 함수를 정의할 때 지정해주어야 합니다.
+  print(thing1 + " 내리고, ")
+  print(thing2 + " 흐르면, ")
+  print("난 당신을 생각해요, ")
+  print("당신이 떠나시던 그 밤에 이렇게 비가 왔어요 \n") 
+
+sing("비가", "맥주") # 기본값 매개변수는 일반 매개변수와 달리 호출 시 생략할 수 있습니다.
+
+
+
+
+
+# return
+
+  def divide_by_2(input_number):
+    return input_number / 2
+
+def divide_by_2(input_number):
+  print("릭 아저씨의 반값 후려치기!")
+  return input_number / 2
+
+
+def divide_by_3(input_number):
+  return_number = input_number / 3
+  return return_number
+  print('3으로 나눴습니다.')
+
+print(divide_by_3(10))
+
+
+
+# multi returns
+
+def sample(): 
+    str_tmp = "geeksforgeeks"
+    x = 20
+    return str_tmp, x # , 로 값을 여러 개 반환할 수 있습니다
+  
+str_tmp, x = sample() # 마찬가지로 여러 개 값을 한 번에 받아올수 있습니다
+print(str_tmp) 
+print(x) 
