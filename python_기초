@@ -1,0 +1,64 @@
+# 123213  -> CTRL + /
+# 123
+# 코딩을 설명하는 노트 테이킹을 할 수 있습니다.
+print("프로그래밍")
+
+# #=주석
+
+# print() = 출력
+print("안녕하세요!") 
+print(10)           
+print(False)        
+
+
+# 변수 지정
+
+# 칼로리 섭취량 계산
+lunch = 390 # lunch 라는 변수에 390이라는 숫자를 할당하라 (컴퓨터에게 전달)
+lemon_juice = 40
+
+# 칼로리 섭취량 출력
+print("점심 : ", lunch) # lunch라는 변수에 무슨 값이 있는지 보여줘
+print("레몬 쥬스 : ", lemon_juice)# lemon_juice라는 변수에 무슨 값이 있는지 보여줘 
+
+
+# 큰 따옴표와 작은 따옴표를 사용해서 자신의 이름을 소개하기
+print('저의 이름은 "김마인" 입니다')
+print("저의 이름은 김마인 입니다.")
+print("저의 이름은 '김마인' 입니다.")
+
+# 가장 바깥의 문자열을 정의하는 부호가 작은 따옴표일 경우 -> 내부는 큰 따옴표로 인용을 표기
+print("저의 이름은 \"김마인\" 입니다.")
+
+
+# ()안의 수의 종류를 알려줌
+type(1)
+
+grade_1 = 3    #int 형 (정수) - 기본 설정
+grade_2 = 2.0  #float 형 (실수)
+ 
+# type(변수명)
+print("grade_1 type : ") 
+print(type(grade_1)) # 정수로 인식
+print("grade_2 type : ")
+print(type(grade_2)) # 실수로 인식
+ 
+print("average : ")  #파이썬에서는 타입을 알아서 자동으로 변환해줍니다!
+# grade_1 = 3
+print(grade_1/2 + grade_2/2)
+print(type(grade_1/2 + grade_2/2))
+
+
+#불 데이터 타입
+# boolean: 참 (1) / 거짓 (0)
+
+# '할당'을 해줄때는 =, 우리가 아는 '같다'의 뜻인 등호는 == 
+
+print(True==1) # 변수명이 아니라, 예약어로 처리
+print(True==0)
+print("True")
+print(type(True))
+print(type(False))
+type(True)
+var = "True"
+type(var)
