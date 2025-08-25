@@ -1,0 +1,78 @@
+"""
+스토리형 어드벤처 게임
+"""
+
+def show_scene(scene_id, scenes, inventory):
+    scene = scenes[scene_id]
+    print("\n" + "="*40)
+    print(scene["text"])
+    if "item" in scene:
+        inventory.append(scene["item"])
+        print(f"🎁 {scene['item']} 을(를) 얻었다!")
+
+    if not scene["choices"]:
+        print("게임 종료!")
+        return None
+
+    for i, (desc, _) in enumerate(scene["choices"], 1):
+        print(f"{i}. {desc}")
+
+    while True:
+        try:
+            choice = int(input("선택: ")) - 1
+            if 0 <= choice < len(scene["choices"]):
+                return scene["choices"][choice][1]
+        except ValueError:
+            pass
+        print("❗ 올바른 번호를 입력하세요.")
+
+
+def main():
+    inventory = []
+    scenes = {
+        "start": {
+            "text": "당신은 작은 마을에 도착했습니다. 모험을 떠날 준비가 되었습니다. 어디로 가시겠습니까?",
+            "choices": [
+                ("숲으로 간다", "forest"),
+                ("동굴로 간다", "cave"),
+                ("탑으로 간다", "tower")
+            ]
+        },
+        "forest": {
+            "text": "숲속에서 빛나는 보물을 발견했습니다!",
+            "item": "숲의 보물",
+            "choices": [
+                ("동굴로 이동", "cave"),
+                ("탑으로 이동", "tower")
+            ]
+        },
+        "cave": {
+            "text": "동굴 속에서 신비한 보석을 발견했습니다!",
+            "item": "동굴의 보석",
+            "choices": [
+                ("탑으로 이동", "tower")
+            ]
+        },
+        "tower": {
+            "text": "높은 탑 꼭대기에서 모험의 마지막 결정을 맞이합니다...",
+            "choices": []
+        }
+    }
+
+    # 스토리 진행
+    current = "start"
+    while current:
+        current = show_scene(current, scenes, inventory)
+
+    # 엔딩 판정
+    print("\n" + "="*40)
+    if len(inventory) == 2:
+        print("🎉 모든 보물을 모으고 마을로 돌아갔습니다. 해피 엔딩!")
+    elif len(inventory) == 1:
+        print("🙂 일부 보물만 가지고 돌아갔습니다. 평범한 엔딩.")
+    else:
+        print("💀 빈손으로 돌아갔습니다. 배드 엔딩...")
+
+
+if __name__ == "__main__":
+    main()
